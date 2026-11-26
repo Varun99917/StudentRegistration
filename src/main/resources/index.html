@@ -1,25 +1,147 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Student Registration</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            width: 100%;
+            max-width: 450px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        #message {
+            text-align: center;
+            margin-top: 18px;
+            font-weight: bold;
+            color: green;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #888;
+            font-size: 12px;
+        }
+    </style>
 </head>
+
 <body>
-    <h2>Student Registration Form</h2>
 
-    <form>
-        <input type="text" placeholder="Student Name" required><br><br>
-        <input type="text" placeholder="Roll Number" required><br><br>
-        <input type="email" placeholder="Email" required><br><br>
+    <div class="container">
 
-        <select required>
-            <option value="">Select Course</option>
-            <option>B.Tech</option>
-            <option>MCA</option>
-            <option>BCA</option>
-        </select><br><br>
+        <h2>Student Registration</h2>
 
-        <button type="submit">Register</button>
-    </form>
+        <p class="subtitle">Fill the form to register</p>
+
+        <form action="/" method="POST">
+
+            <label>Student Name</label>
+            <input type="text"
+                   name="studentName"
+                   placeholder="Enter your name"
+                   required>
+
+            <label>Roll Number</label>
+            <input type="text"
+                   name="rollNumber"
+                   placeholder="Enter roll number"
+                   required>
+
+            <label>Email Address</label>
+            <input type="email"
+                   name="email"
+                   placeholder="Enter email address"
+                   required>
+
+            <label>Select Course</label>
+            <select name="course" required>
+                <option value="">Choose Course</option>
+                <option value="B.Tech">B.Tech</option>
+                <option value="BCA">BCA</option>
+                <option value="MCA">MCA</option>
+                <option value="MBA">MBA</option>
+            </select>
+
+            <button type="submit">Submit Registration</button>
+
+        </form>
+
+        <div class="footer">
+            Student Registration System | DevOps Practical
+        </div>
+
+    </div>
+
 </body>
 </html>
